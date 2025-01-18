@@ -26,7 +26,7 @@ Before using this extension, ensure you have the following installed:
    git clone https://github.com/your-username/LeetCode-problem-solver.git
 2. Navigate to the Project Folder:
   
-       cd LeetCode-Testcase-Runner
+       cd LeetCode-problem-solver
    
 3. Install Dependencies: Run the following command to install required node modules:
 
@@ -35,20 +35,22 @@ Before using this extension, ensure you have the following installed:
 
 5. Change the path to the path of your scrape_scripe.py in extension.ts
    
-        const pythonScriptPath = "D:\\cp-vishesh\\cp-vishesh-problem\\path_to your_scrape_script.py\\scrape_script.py";  
-6. Launch the Extension: Press F5 in VS Code to launch the extension.
+        const pythonScriptPath = "D:\\cp-vishesh\\cp-vishesh-problem\\path_to your_scrape_script.py\\scrape_script.py";
+   ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145525.png)
+7. Launch the Extension: Press F5 in VS Code to launch the extension.
 
 ## Commands
 1. Fetch Test Cases
   * Press Ctrl+Shift+P or Cmd+Shift+P to open the Command Palette.
-  * Type and select Fetch Data.
+  * Type and select Fetch Test Cases.
   * Enter the LeetCode problem URL when prompted.
   * The extension will fetch the input and output test cases and store them for later use.
 2. Run File and Compare Outputs
   * Press Ctrl+Shift+P or Cmd+Shift+P again to open the Command Palette.
-  * Type and select Run File.
+  * Type and select Run Active Files.
   * Enter the path of the file you want to run (Python or C++).
   * The extension will execute the file and compare the output with the expected outputs.
+![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145714.png)
 ## Supported Languages
 Python (.py)
 
@@ -56,11 +58,12 @@ C++ (.cpp)
 
 
 ## How It Works
-*  Fetch Test Cases: When you enter a LeetCode problem URL, the extension uses a Python script to scrape the problem's input and expected output test cases, which are then saved locally for later use.
+![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145635.png?raw=true)
+*  Fetch Test Cases: When you enter a LeetCode problem URL, the extension uses a Python script to scrape the problem's input and expected output test cases, which are then saved locally for later use, you can customize them too in the extension host environment.
 
 * Run the File:
 
-For Python: The extension runs the Python file with input redirection using the fetched test cases.
+For Python: The extension runs the Python file with input redirection using the fetched test cases you can customize the template python file according to your needs in the extension host environment.
 
-For C++: The extension compiles the C++ file, and then runs the executable with input redirection.
+For C++: The extension compiles the C++ file, and then runs the executable with input redirection ,you can customize the template cpp file according to your needs and get the results in the extension host environment.
 Compare Outputs: After execution, the extension compares the actual output with the expected output and displays the results in a readable format.
