@@ -1,71 +1,66 @@
-# cp-vishesh-problem README
+# LeetCode Testcase Runner Extension
 
-This is the README for your extension "cp-vishesh-problem". After writing up a brief description, we recommend including the following sections.
+A custom VS Code extension designed to enhance your LeetCode coding experience by automating the process of fetching test cases from LeetCode problems and running your solutions against them. For this selenium based webscraping is used and then the files are runned according to their extension. For the purpose of running a template is provided you have to make changes in the template to run the code without any error.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Fetch Test Cases**: Automatically fetch input and output test cases from any LeetCode problem URL.
+- **Run Code and Compare Outputs**: Execute your solution and compare the actual output with the expected output.
+- **Multi-language Support**: Currently supports Python and C++ for solution execution.
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+Before using this extension, ensure you have the following installed:
 
-## Extension Settings
+- [VS Code](https://code.visualstudio.com/)
+- [Node.js](https://nodejs.org/)
+- [Python](https://www.python.org/)
+- [G++ Compiler](https://gcc.gnu.org/)
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+## Installation
 
-For example:
+1. **Clone the Repository**:
+   Clone this repository to your local machine using:
+   
+   ```bash
+   git clone https://github.com/your-username/LeetCode-problem-solver.git
+2. Navigate to the Project Folder:
+  
+       cd LeetCode-Testcase-Runner
+   
+3. Install Dependencies: Run the following command to install required node modules:
 
-This extension contributes the following settings:
+       npm install
+       pip install selenium beautifulsoup4
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+5. Change the path to the path of your scrape_scripe.py in extension.ts
+   
+        const pythonScriptPath = "D:\\cp-vishesh\\cp-vishesh-problem\\path_to your_scrape_script.py\\scrape_script.py";  
+6. Launch the Extension: Press F5 in VS Code to launch the extension.
 
-## Known Issues
+## Commands
+1. Fetch Test Cases
+  * Press Ctrl+Shift+P or Cmd+Shift+P to open the Command Palette.
+  * Type and select Fetch Data.
+  * Enter the LeetCode problem URL when prompted.
+  * The extension will fetch the input and output test cases and store them for later use.
+2. Run File and Compare Outputs
+  * Press Ctrl+Shift+P or Cmd+Shift+P again to open the Command Palette.
+  * Type and select Run File.
+  * Enter the path of the file you want to run (Python or C++).
+  * The extension will execute the file and compare the output with the expected outputs.
+## Supported Languages
+Python (.py)
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+C++ (.cpp)
 
-## Release Notes
 
-Users appreciate release notes as you update your extension.
+## How It Works
+*  Fetch Test Cases: When you enter a LeetCode problem URL, the extension uses a Python script to scrape the problem's input and expected output test cases, which are then saved locally for later use.
 
-### 1.0.0
+* Run the File:
 
-Initial release of ...
+For Python: The extension runs the Python file with input redirection using the fetched test cases.
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+For C++: The extension compiles the C++ file, and then runs the executable with input redirection.
+Compare Outputs: After execution, the extension compares the actual output with the expected output and displays the results in a readable format.
