@@ -40,17 +40,26 @@ Before using this extension, ensure you have the following installed:
 7. Launch the Extension: Press F5 in VS Code to launch the extension.
 
 ## Commands
-1. Fetch Test Cases
+
+### 1. Fetch Test Cases
   * Press Ctrl+Shift+P or Cmd+Shift+P to open the Command Palette.
+    ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145714.png)
   * Type and select Fetch Test Cases.
   * Enter the LeetCode problem URL when prompted.
+   ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20151757.png)
+    
   * The extension will fetch the input and output test cases and store them for later use.
-2. Run File and Compare Outputs
+
+
+### 2. Run File and Compare Outputs
   * Press Ctrl+Shift+P or Cmd+Shift+P again to open the Command Palette.
+    ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145714.png)
   * Type and select Run Active Files.
-  * Enter the path of the file you want to run (Python or C++).
+  * Enter the path of the file you want to run (Python or C++) to get the idea of how to make the files read the template folder.
+    ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20150947.png)
   * The extension will execute the file and compare the output with the expected outputs.
-![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20145714.png)
+    ![Alt text](https://github.com/MaSsKmAn/LeetCode-problem-solver/blob/main/photos/Screenshot%202025-01-18%20151553.png)
+
 ## Supported Languages
 Python (.py)
 
